@@ -1,0 +1,4 @@
+Synchronization of State (Game) Space for Multiplayer Online Gaming
+===================================================================
+
+In multiplayer online gaming, players (clients) across the world may be competing against each other in a game. How is it that all the players are able to simultaneously act in the game's environment 
