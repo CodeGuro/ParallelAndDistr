@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>DirectXTutorial.com</title><link href="DirectXTutorial.com-1_files/Layout.css" rel="Stylesheet" type="text/css"><link href="DirectXTutorial.com-1_files/Black.css" rel="Stylesheet" type="text/css"><script src="DirectXTutorial.com-1_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="DirectXTutorial.com-1_files/dxpages.js" language="javascript"></script></head><body><a href="http://www.directxtutorial.com/default.aspx"><img src="DirectXTutorial.com-1_files/HeadLogo.png" alt="DirectXTutorial.com"></a><div class="logoscript">The Ultimate DirectX Tutorial</div><div class="logout">Signed in as 'tukun2'<br><a class="mainlink" href="http://www.directxtutorial.com/changeprofile.aspx">Change Profile</a> - <a class="mainlink" href="http://www.directxtutorial.com/signout.aspx?retloc=lesson.aspx&amp;lessonid=9-11-1">Sign Out</a></div><div class="sidebar"><div class="sidepanel"><div><b>Navigation</b><br><br><a class="sidelink" href="http://www.directxtutorial.com/default.aspx">Home</a><br><a class="sidelink" href="http://www.directxtutorial.com/LessonList.aspx?listid=111">DirectX for Windows 8</a><br><a class="sidelinkin1" href="http://www.directxtutorial.com/LessonList.aspx?listid=112">DirectX 11.2</a><br><a class="sidelinkin1" href="http://www.directxtutorial.com/LessonList.aspx?listid=111">DirectX 11.1</a><br><a class="sidelink" href="http://www.directxtutorial.com/LegacyList.aspx">DirectX for Desktop</a><br><a class="sidelinkin1" href="http://www.directxtutorial.com/LessonList.aspx?listid=11">DirectX 11</a><br><a class="sidelinkin1" href="http://www.directxtutorial.com/LessonList.aspx?listid=9">DirectX 9</a><br><a class="sidelink" href="http://www.directxtutorial.com/lessonarticle.aspx?id=2">Useful Resources</a><br><a class="sidelink" href="http://www.directxtutorial.com/lessonarticle.aspx?id=1">About DirectXTutorial</a><br><a class="sidelink" href="http://www.directxtutorial.com/TPremium.aspx">DirectXTutorial Premium</a><br><a class="sidelink" href="http://www.directxtutorial.com/testimonials.aspx">Testimonials</a><br></div></div><br><div class="sidepanel"><div><b>Contact</b><br><br>Contact me here:<br><span style="font-size:11px;">Twitter: <a class="mainlink" href="https://twitter.com/#%21/dastopher">@dastopher</a><br>Email: chris@directxtutorial.com<br></span><br>Or leave me feedback:<br><span style="font-size:11px;"><a href="" class="mainlink" onclick="RunFeedback(); return false;">Quick Feedback</a></span><br></div></div><br></div><div class="titlebar">Lesson 1: The Basics of Networking</div><div class="entrybox"><div class="navbar"><div class="prevbar"><a class="mainlink" href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-10-4">Previous</a></div><div class="nextbar"><a class="mainlink" href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-11-2">Next</a></div></div><div class="entryheader" style="position:relative;">Lesson Overview</div><div class="maintext" style="position: relative;"><p>This
+ tutorial will cover the basics of building a game network.  We will 
+cover how to establish a connection on a game server, as well as on the 
+game itself.  We will then look at how to build a simple chat program, 
+and from there, build a simple multiplayer game.</p><p>In this lesson, 
+we will talk about networking.  An understanding of networking is vital 
+to any multiplayer game.  You will probably be spending some time 
+customizing your network to fit your server application, or vice versa, 
+so a knowledge of how computers communicate with one another is 
+important.  </p></div><div class="entryheader" style="position:relative;">The OSI Model</div><div class="maintext" style="position: relative;"><p>Networks
+ can be quite a complex subject.  As an industry, we have been building 
+our networks piece by piece until it has become a mass of technologies 
+that mostly work together.  Only by understanding it all can you really 
+work with a network.  However, let's take a very simple overview at what
+ a network is, and what its basic components are.</p><p>For the time 
+being, I will only assume that you know what a network is, and what a 
+client and server are.  I just taught someone what "clicking the mouse" 
+was (yes, even in 2008), and I don't feel like over-simplifying things 
+right now.</p><p class="subheader">The OSI Model</p><p style="padding-left:15px;">Back
+ in the 70s, a single model was developed to standardize all data 
+communications.  This model is called the Open Systems Interconnection 
+Model, or OSI.  It consists of seven "layers" of technology, each built 
+one on top of the other.</p><p style="padding-left:15px;">What's neat 
+about the OSI model is that it doesn't matter how each layer is built to
+ do its job, so long as it complies with the standards of interfacing 
+with the layers surrounding it.  So we won't get into too much detail on
+ what each interface does and how, because it doesn't matter.  However, 
+we should at least know what they are and know how to identify parts of 
+each one.</p><p style="padding-left:15px;">Here are the layers:</p><center><img alt="The OSI Model" src="DirectXTutorial.com-1_files/1.gif" height="344" width="225"><br><br>The OSI Model</center><p style="padding-left:15px;">Let's take a look at each one, from the bottom up.</p><p style="padding-left:15px;">Layer
+ 1: Physical Layer - At the very bottom of the stack, we have the first 
+layer, the Physical Layer.  This layer consists of the actual physical 
+matter of the network.  It contains standards for wires, plugs, 
+voltages, network devices and more.</p><p style="padding-left:15px;">Layer
+ 2: Data Link Layer - The next layer of the network consists of how to 
+send data from one network device to the next.  It is usually controlled
+ by the network device driver and the firmware on the various devices.  
+This layer also takes care of ensuring that data is accurately 
+transmitted from device to device, and retransmitted if errors are made.</p><p style="padding-left:15px;">Layer
+ 3: Network Layer - While Layer 2 handles how to get data from one 
+device to the next, the Network Layer handles how data will eventually 
+get to its destination, and what route it will take.</p><p style="padding-left:15px;">Layer
+ 4: Transport Layer - This layer acts as a sort of shield or wrapper 
+between the hardware layers (above) and the software layers (below).  
+The software works with the Transport Layer, which in turn works with 
+the Network Layer to make things happen.</p><p style="padding-left:15px;">Layer
+ 5: Session Layer - This layer is the first real software layer.  It 
+handles the opening and closing of connections.  Once a connection has 
+been established, applications can send data through that connection 
+without worrying about where the other computer is, what it is, etc.</p><p style="padding-left:15px;">Layer
+ 6: Presentation Layer - This layer is a translation layer.  It handles 
+things like encryption and decryption, translating it to work with 
+different systems, and other such things.</p><p style="padding-left:15px;">Layer
+ 7: Application Layer - This final layer is what we are interested in.  
+It is the application itself, directing what data is to reach the other 
+system, and what system to send it to.</p><p style="padding-left:15px;">These
+ seven layers create a whole network.  Now, don't worry about getting 
+too deep into each layer.  Wikipedia has more than enough information 
+about each one.  Realize though, that each layer could easily be the 
+focus of an entire profession, and you really need not know everything 
+about it.  That's why this system exists: so you don't have to.</p><p style="padding-left:15px;">We
+ will be focusing mainly on Layer 4, the Network Layer.  Naturally, 
+because we are usually writing applications, we will be working with the
+ layers in between 4 and 7, but for the most part we will be doing these
+ ourselves.</p><p style="padding-left:15px;">But no worries.  It's really not that hard.  </p></div><div class="entryheader" style="position:relative;">Network Protocols</div><div class="maintext" style="position: relative;"><p>To
+ communicate between the various layers, certain systems are created.  
+Because the OSI model is quite old, newer technologies have called for 
+different ways to pass information.  Of course, not everyone has agreed 
+on which system to use, and in some cases multiple ways have been 
+created by different people at the same time.</p><p>However, usually 
+when network programmers talk about protocols, they are talking about 
+the software-end protocols, such as TCP/IP, HTTP or POP3, to name a few.</p><p>A more complete list can be found <a class="mainlink" target="_blank" href="http://en.wikipedia.org/wiki/List_of_network_protocols">here</a> if you're interested.  If you're not, here are a few common protocols you will probably be familiar with, if only by name:</p><table class="tablebox" style=""><tbody><tr><th width="120px">Value</th><th width="50px">Layer</th><th width="440px">Description</th></tr><tr><td>T1</td><td>1</td><td>Also called DS-1 or Digital Signal 1, T1 is a rather high-speed connection.</td></tr><tr><td>Token Ring</td><td>2</td><td>A protocol used in setting up networks by connecting computers in a ring, rather than from a central point.</td></tr><tr><td>IP</td><td>3</td><td>Short
+ for Internet Protocol, IP is the primary internet connection protocol 
+used today.  There are two versions, IPv4 and IPv6.  The industry is in 
+the slow process of switching from 4 to 6.  This tutorial will assume we
+ are using IPv4, as it is still the dominant version.</td></tr><tr><td>TCP</td><td>4</td><td>Transmission
+ Control Protocol.  This is actually a sort of "helper" to IP.  TCP 
+handles, using software, many things that IP cannot efficiently handle. 
+ We'll go over these below.  The names of TCP and IP frequently get 
+mashed together to be called TCP/IP, because of how frequently they work
+ together.</td></tr><tr><td>UDP</td><td>4</td><td>User Datagram 
+Protocol.  This is a similar protocol to TCP.  It is used similar to the
+ way TCP is used, but is different in that it is faster and less 
+reliable.</td></tr><tr><td>POP3</td><td>7</td><td>Post Office Protocol v3 is used to get email from mail servers.  It uses the TCP/IP protocol to send its data.</td></tr><tr><td>IMAP</td><td>7</td><td>Internet
+ Message Access Protocol.  This is similar to POP3, but is newer and 
+neater.  Instead of downloading all your email to a computer and then 
+deleting it off the server, it leaves everything on the server and only 
+downloads emails you look at.  This lets you access your data from any 
+email program connected to the server.</td></tr><tr><td>HTTP</td><td>7</td><td>Hyper-text Transfer Protocol.  This is the application protocol used to send the contents about web pages.</td></tr><tr><td>HTTPS</td><td>7</td><td>This
+ is almost identical to HTTP, but is different in that it uses 
+encryption to secure the data and prevent hackers from listening in.</td></tr></tbody></table><p>Notice
+ that I didn't list any protocols from 5 and 6.  This is because there 
+aren't any of note for our purposes, although there are protocols in 
+these layers.  We are mainly going to be developing these on our own as 
+needed (although you are certainly free to use other protocols at your 
+own choice). </p><hr><p class="subheader">Transmission Control Protocol</p><p style="padding-left:15px;">IP,
+ as described in the table, is the primary method to connect to the 
+internet.  However, there are different ways to use IP.  These ways are 
+actually protocols at the fourth layer.  Two common protocols are TCP 
+and UDP.  Of the two, TCP is more often used, mainly because of its 
+reliability.</p><p style="padding-left:15px;">On the other hand, each 
+has its advantages, and in the case of game programming, we want UDP, 
+which has the advantage of speed.  Let's take a look into this.</p><p style="padding-left:15px;">TCP
+ and UDP, of course, both depend on the IP protocol to handle Network 
+Layer activities.  But in truth, IP is a very unreliable protocol by 
+default.  It's packets always arrive exactly as they were sent, but they
+ are sometimes delayed or thrown out of order.  Here's how it works.</p><p style="padding-left:15px;">IP
+ sends messages directly from one computer to another.  It works out all
+ the details of the network and figures out the best route.  You don't 
+need to know how, it just gets to the other side.</p><center><img alt="Messages Going Throught the Internet" src="DirectXTutorial.com-1_files/2.gif" height="164" width="530"><br><br>Messages Going Throught the Internet</center><p style="padding-left:15px;">Unfortunately,
+ our physical network technologies are not flawless, and sometimes the 
+packets get hung up at some point along the line.  It may hang for a 
+short time or a long time, but the packet will eventually arrive, and it
+ will arrive intact and perfectly accurate (of course, this is assuming 
+the hardware doesn't fail first).  Such a packet is called a <i>ghost</i>.</p><center><img alt="Messages Can Hang at Any Point" src="DirectXTutorial.com-1_files/3.gif" height="164" width="530"><br><br>Messages Can Hang at Any Point</center><p style="padding-left:15px;">This is where TCP comes in.  TCP, in the layer above IP, tells IP everything to send and knows about everything IP receives. </p><p style="padding-left:15px;">When TCP receives something, it sends a reply, letting the sending computer know that the packet was received.</p><center><img alt="Replies Help Avoid Missing Data" src="DirectXTutorial.com-1_files/4.gif" height="164" width="530"><br><br>Replies Help Avoid Missing Data</center><p style="padding-left:15px;">However, if the original computer never gets the reply, TCP automatically resends the packet.</p><center><img alt="If No Reply, Resend the Data" src="DirectXTutorial.com-1_files/5.gif" height="164" width="530"><br><br>If No Reply, Resend the Data</center><p style="padding-left:15px;">In
+ addition to this, delayed packets can cause some packets to appear out 
+of order.  TCP also takes care of this, making all your packets arrive 
+at the application in the same order they were sent.  In short, TCP 
+makes absolute certain that the information sent is sent exactly.</p><p style="padding-left:15px;">Unfortunately,
+ this can be very slow, especially if you need to be sending large 
+amounts of information very quickly, as in a game.  This is where UDP 
+comes in. </p><hr><p class="subheader">User Datagram Protocol</p><p style="padding-left:15px;">The User Datagram Prtocol (UDP) is a more direct way to utilize the IP protocol.</p><p style="padding-left:15px;">It
+ certainly has its advantages.  It is faster, as it doesn't have all the
+ extra tasks of making sure everything actually arrives correctly.  
+There doesn't need to be back-and-forth messaging just to find out if 
+something arrived or not, and of course, the back-and-forth messaging 
+can get lost and things get very confusing and slow sometimes.</p><p style="padding-left:15px;">UDP
+ just sends data.  It doesn't verify that it has arrived, and when it 
+arrives, it's not necessarily in the order that was intended.  This 
+makes its uses limited, but it also makes it fast.  And fast is what we 
+want.</p><p style="padding-left:15px;">This means, of course, that if a packet gets hung up, it may never get to where it's going.</p><p style="padding-left:15px;">So
+ why use UDP if the data gets lost?  Well, the fact is, in a multiplayer
+ game, the game goes on whether the network data arrives or not.  When 
+data doesn't arrive on time, it appears in the game as lag, and when the
+ data does arrive later, it is discarded, as it is simply too late to 
+show.</p><hr><p>In conclusion, I can only say that there will be need 
+for both protocols.  Basic network actions occur on the UDP protocol.  
+The TCP protocol is a great way to wrap up certain actions in a 
+relatively easy-to-use setup.  For fast data transfer where reliablility
+ is not important, UDP is by far preferable.  </p></div><div class="entryheader" style="position:relative;">IP Addresses and Ports</div><div class="maintext" style="position: relative;"><p>The IP protocol uses two number systems to route data to its destination.</p><p>The first is the <i>IP address</i>.  The job of the IP address is to point to a specific computer to which the data is to be sent.</p><p>The second is the <i>port</i>.  The job of the port is to point to a specific <i>application</i> on the destination computer.</p><p>Let's look into these.</p><hr><p class="subheader">IP Addresses</p><p style="padding-left:15px;">IP Addresses are something many of us are familiar with already.  However, you may not understand further than its definition.</p><p style="padding-left:15px;">By
+ definition, an IP address is a numerical ID that is assigned to a 
+specific device on a network.  The internet, actually being a large 
+network, uses these to locate your computer and send messages to it.  
+Using this system, your computer can send messages to up to 
+4,294,967,296 (or 2^32)different computers.  It consists of four numbers
+ between 0 and 255, separated by periods.</p><p style="padding-left:15px;">Some
+ sections of IP addresses have been set aside to be used in private 
+networks.  A private network is the same as a local area network, or 
+LAN.  This means that your computer would refer to itself under a 
+private IP address, while other computers would refer to you under your 
+normal IP address.</p><p style="padding-left:15px;">This could look like: 23.14.92.235</p><p style="padding-left:15px;">For
+ example, an Internet server might send messages to your computer by 
+using, say, 209.85.171.99, while another family computer might contact 
+your computer by using 192.168.1.101.</p><p style="padding-left:15px;">These sections of IP addresses are:</p><p style="padding-left:15px;">10.XXX.XXX.XXX</p><p style="padding-left:15px;">172.[16-31].XXX.XXX</p><p style="padding-left:15px;">192.168.XXX.XXX</p><p style="padding-left:15px;">Here, the Xs mean there can be any number, provided it is between 0 and 255.</p><p style="padding-left:15px;">So
+ how do you find your own IP address?  For your external, non-private IP
+ address, there are more than enough websites that can tell you.  Just 
+Google one.</p><p style="padding-left:15px;">For an internal, private 
+IP, you can do this by running a simple program called IPConfig.exe.  It
+ is run from the command prompt and can give you useful information 
+about your network connections.</p><center><img alt="IPConfig.exe" src="DirectXTutorial.com-1_files/6.png" height="302" width="629"><br><br>IPConfig.exe</center><p style="padding-left:15px;">This
+ is a typical result of IPConfig.  You can see, under IP Address, your 
+computer's private IP address.  Not every IPConfig output looks like 
+this, however, so don't be surprised if you don't get a different 
+result, but you will be able to locate each network connection and its 
+IP.</p><p style="padding-left:15px;">Another useful datum we can get 
+from this is the IP addresses of the default gateway.  A gateway is a 
+device that interfaces two networks.  For example, many people have a 
+router at home which connects them to the Internet.  This gateway 
+interfaces the home network (the LAN) and the Internet.  Here, the IP 
+address for the router is 192.168.1.1.  Using this IP address in a 
+browser usually allows you to access the router settings, customize the 
+firewall or connection, and more.</p><hr><p class="subheader">Ports</p><p style="padding-left:15px;">Once
+ a piece of data has reached a computer, that computer then has to 
+decide what to do with it.  Computers are running lots of programs at 
+the same time, and there needs to be some way for the computer to 
+determine which program gets what data.   To do this, networks use what 
+is called a port.</p><p style="padding-left:15px;">A port is basically a
+ number used to tell the operating system which program is to get what 
+data.  Every time data is sent across the network, a port number is 
+included with it.  The operating system takes this port number and 
+redirects it to the program that "opened" that port.</p><p style="padding-left:15px;">A
+ port number is a 16-bit integer (0 - 65535).  Certain things usually 
+use specific port numbers by convention.  For example, SMTP servers 
+usually listen on port 25, and POP3 servers listen on port 110.  There 
+are conventions set for all ports up through 1024.  After this point, 
+any program may open a port up through 49151.  After 49151 are what are 
+called ephemeral ports.  These are ports that are automatically set for 
+programs by the TCP or UDP protocols.  Normally these are used by client
+ computers, while servers use ports between 1025 and 49151.</p><p style="padding-left:15px;">While
+ it is usually okay to use ports between 1025 and 49151, be aware that 
+there are other programs using them as well.  Wikipedia has a <a class="mainlink" target="_blank" href="http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">list of common port usage</a>, so you can avoid conflict with other programs that might be installed.  </p></div><div class="entryheader" style="position:relative;">Windows Sockets</div><div class="maintext" style="position: relative;"><p>So
+ how do you work with all of this?  How do you send information over the
+ network and over the Internet?  You do so with what are called <i>sockets</i>.</p><p>A
+ socket is what we could call an end-point of a network communication.  
+It is the interface through which the application interacts with the 
+network.  Data is sent from one socket and arrives, in whatever manner, 
+at another socket.</p><center><img alt="Applications Connect Through Sockets" src="DirectXTutorial.com-1_files/7.gif" height="225" width="508"><br><br>Applications Connect Through Sockets</center><p>There
+ are three kinds of sockets.  They are Datagram Sockets, Stream Sockets 
+and Raw Sockets.  Datagram Sockets are managed by the UDP protocol, 
+which we will learn.  Stream sockets are used by the TCP protocol or 
+similar protocols, which we will learn a little bit about.  Raw sockets 
+are sockets that actually bypass the operating system and just send 1s 
+and 0s directly to the receiving socket.  We won't be getting into 
+these.</p><p>Windows Sockets (usually shortened to Winsock) is an API 
+that lets you set up sockets in Windows applications.  It is capable of 
+handling both Datagram and Stream sockets.  In the rest of this 
+tutorial, we will be learning to use this API to do basic networking 
+actions.</p><p>So let's learn all about it!  </p></div><div class="entryheader" style="position:relative;">Summary</div><div class="maintext" style="position: relative;"><p>In
+ this lesson we've covered some basic networking principles.  We've by 
+no means covered the lot of it.  Networking is something you could 
+specialize in for years and still learn new things about.  However, the 
+basics are all you need to know to launch yourself into it.</p><p>Before going on to the next lesson and starting network programming, try these exercises:</p><p>1.  Figure out both your private and external IP addresses. <br>2.  If you have access to a network gateway, try to access its settings. <br>3.  Look online and find out what port web browsers typically use.  What about your e-mail client?</p><p>Now, let's get down to business!</p><center><p>Next Lesson: Starting Winsock with UDP</p><p><a class="mainlink" href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-11-2">GO! GO! GO!</a></p></center></div><center><div class="copyright"> © 2006-2016 DirectXTutorial.com. All Rights Reserved. <a href="" onclick="RunLegal(); return false;" class="availablelink">Expand</a></div></center></div><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-476839-2']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script></body></html>

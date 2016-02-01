@@ -1,0 +1,189 @@
+﻿body
+{
+    background: #000;
+    background-color: Black;
+}
+
+h1
+{
+    color: White;
+    background-color: Black;
+}
+
+strong
+{
+    color: white;
+}
+
+b
+{
+	color: White;
+}
+
+.logoscript
+{
+    color: White;
+    background-color: Black;
+}
+
+.sidebar2
+{
+    color: White;
+}
+
+.sidebar
+{
+    color: White;
+}
+
+.sidepanel
+{
+    color: White;
+    background-color: #202020;
+}
+
+.logout
+{
+    color: White;
+    background-color: #000000;
+}
+
+a.sidelink:link
+{
+    color: White;
+}
+
+a.sidelink:visited
+{
+	color: white;
+}
+
+a.sidelink:hover
+{
+	color: white;
+}
+
+a.sidelink:active
+{
+	color: white;
+}
+
+a.sidelinkin1:link
+{
+	color: white;
+}
+
+a.sidelinkin1:visited
+{
+	color: white;
+}
+
+a.sidelinkin1:hover
+{
+	color: white;
+}
+
+a.sidelinkin1:active
+{
+	color: white;
+}
+
+.copyright
+{
+	color: #727272;
+	background-color: black;
+}
+
+.titlebar
+{
+    color: white;
+}
+
+.codebox
+{
+	border: 1px solid white;
+	color: #cccccc;
+	background-color: #323232;
+}
+
+.tablebox
+{
+	border-right: white 1px solid;
+	border-top: white 1px solid;
+	border-left: white 1px solid;
+	border-bottom: white 1px solid;
+}
+
+td
+{
+	color: white;
+	background-color: black;
+}
+
+th
+{
+	color: white;
+	background-color: black;
+}
+
+.entryheader
+{
+	color: white;
+	background-color: #202020;
+}
+
+.maintext
+{
+	color: white;
+	background-color: black;
+}
+
+.mainlink:link
+{
+	color: white;
+}
+
+.mainlink:visited
+{
+	color: white;
+}
+
+.mainlink:hover
+{
+	color: #c8c8c8;
+}
+
+.mainlink:active
+{
+	color: white;
+}
+
+.navbar
+{
+	color: white;
+	background-color: black;
+}
+
+.availablelink
+{
+	color: gray;
+}
+
+.feedback
+{
+	color: gray;
+}
+
+.lessonbox
+{
+    border: thin solid #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.lessonboxhighlighted
+{
+    border: thin solid #000000;
+    background-color: #101010;
+    color: #FFFFFF;
+}

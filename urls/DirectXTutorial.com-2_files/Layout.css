@@ -1,0 +1,626 @@
+﻿body
+{
+    background-repeat: no-repeat;
+    background-position: 20pt 10pt;
+}
+
+h1
+{
+    font-size: 15px;
+    font-style: italic;
+    font-family: Arial;
+    font-weight: normal;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.logoscript
+{
+    font-size: 15px;
+    left: 170px;
+    background-image: none;
+    font-style: italic;
+    font-family: Arial;
+    position: absolute;
+    top: 157px;
+    width: 200px;
+    height: 16px;
+}
+
+.wtfbox
+{
+    left: 372px;
+    position: absolute;
+    top: 135px;
+    background-color: transparent;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    z-index: 100;
+}
+
+.sidebar2
+{
+	background-position: left top;
+	background-image: url(https://www.torvera.com/Graphics/SideGridA.JPG);
+	vertical-align: top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size: 15px;
+	font-family: Arial;
+	left: 16px;
+	width: 172px;
+	position: absolute;
+	top: 192px;
+	height: 203px;
+	z-index: 99;
+}
+
+.sidebar
+{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+    background-repeat: repeat-y;
+    background-color: transparent;
+    text-align: left;
+    font-size: 15px;
+    font-family: Arial;
+    left: 16px;
+    width: 172px;
+    position: absolute;
+    top: 192px;
+    z-index: 99;
+}
+
+.sidepanel
+{
+    background-position: left top;
+    /*background-image: url(https://www.torvera.com/Images/Layout/SideGridBody.PNG);*/
+    vertical-align: top;
+    background-repeat: repeat-y;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 15px;
+    font-family: Arial;
+    left: 16px;
+    width: 172px;
+    position: relative;
+    z-index: 99;
+    padding-bottom: 10px;
+}
+
+.sidetopbar
+{
+    left: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+.sidebottombar
+{
+    left: 0px;
+    bottom: -1px;
+    position: absolute;
+}
+
+.logout
+{
+	font-size: 12px;
+	right: 15px;
+	font-family: Arial;
+	position: absolute;
+	top: 15px;
+	text-align: right;
+}
+
+img
+{
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+
+a.sidelink:link
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+}
+
+a.sidelink:visited
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+}
+
+a.sidelink:hover
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+a.sidelink:active
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+}
+
+a.sidelinkin1:link
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+	left: 10px;
+	position: relative;
+}
+
+a.sidelinkin1:visited
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+	left: 10px;
+	position: relative;
+}
+
+a.sidelinkin1:hover
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: underline;
+	left: 10px;
+	position: relative;
+}
+
+a.sidelinkin1:active
+{
+	font-size: 15px;
+	font-family: Arial;
+	font-style: normal;
+	text-decoration: none;
+	left: 10px;
+	position: relative;
+}
+
+.copyright
+{
+	font-weight: normal;
+	font-size: 12px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Arial;
+	text-align: center;
+	position: static;
+	width: 702px;
+	height: 15px;
+	background-image: none;
+}
+
+.titlebar
+{
+    font-size: 30px;
+    text-align: left;
+    font-family: Arial;
+    z-index: 50;
+    left: 268px;
+    width: 658px;
+    position: absolute;
+    top: 192px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.codebox
+{
+	padding: 10px;
+	background-image: none;
+	font-family: 'Courier New';
+	position: relative;
+	left: 0px;
+	width: 656px;
+	top: 0px;
+	font-size: 12px;
+	white-space: pre;
+}
+
+.tablebox
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	background-image: none;
+	padding-bottom: 3px;
+	width: 630px;
+	padding-top: 3px;
+	background-color: transparent;
+	position: relative;
+}
+
+td
+{
+	font-size: 15px;
+	background-image: none;
+	vertical-align: top;
+	font-family: Arial;
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+th
+{
+	font-size: 15px;
+	background-image: none;
+	vertical-align: top;
+	font-family: Arial;
+	text-align: left;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+
+.entrybox
+{
+    position: absolute;
+    left: 228px;
+    top: 230px;
+    z-index: 50;
+    background-image: url(https://www.torvera.com/Graphics/Layout/Pixel.GIF);
+    background-repeat: repeat-y;
+    background-position: 20px;
+    background-color: transparent;
+    width: 600px;
+}
+
+.entry
+{
+	position: static;
+}
+
+.entryheader
+{
+    background-position: left top; /*background-image: url(https://www.torvera.com/Images/Layout/TitleGrid.png);*/
+    color: white;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    position: relative;
+    width: 727px;
+    height: 32px;
+    font-size: 19px;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    z-index: 51;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.maintext
+{
+	font-size: 15px;
+	z-index: 50;
+	vertical-align: top;
+	color: white;
+	font-family: Arial;
+	position: absolute;
+	background-color: black;
+	text-align: left;
+	left: 40px;
+	width: 660px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+}
+
+.indent
+{
+	padding-left: 15px;
+}
+
+.mainlink:link
+{
+	text-decoration: underline;
+}
+
+.mainlink:visited
+{
+	text-decoration: underline;
+}
+
+.mainlink:hover
+{
+	text-decoration: underline;
+}
+
+.mainlink:active
+{
+	text-decoration: underline;
+}
+
+.subheader
+{
+    font-weight: bold;
+}
+
+
+surveydesc
+{
+    width: 652px;
+    height: 60px;
+    position: static;
+}
+
+.secretlink:link
+{
+    font-family: Arial;
+    font-size: 8pt;
+    text-decoration: none;
+    cursor: default
+}
+
+.secretlink:visited
+{
+    font-family: Arial;
+    font-size: 8pt;
+    text-decoration: none;
+    text-decoration: Underline;
+    cursor: hand;
+}
+
+.secretlink:hover
+{
+    font-family: Arial;
+    font-size: 8pt;
+    cursor: default
+}
+
+.secretlink:active
+{
+    font-family: Arial;
+    font-size: 8pt;
+    text-decoration: none;
+    cursor: default
+}
+
+.navbar
+{
+	font-size: 15px;
+	z-index: 50;
+	vertical-align: top;
+	font-family: Arial;
+	text-align: left;
+	
+    position: static;
+    height: 20px;
+    width: 735px;
+}
+
+.nextbar
+{
+    text-align: right;
+    vertical-align: top;
+    position: static;
+}
+
+.prevbar
+{
+    text-align: left;
+    vertical-align: top;
+    position: absolute;
+}
+
+.secretcodelink:link
+{
+	font-family: 'Courier New';
+	color: #cccccc;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: text;
+}
+
+.secretcodelink:visited
+{
+	font-family: 'Courier New';
+	color: #cccccc;
+	font-size: 12px;
+	text-decoration: none;
+    text-decoration: Underline;
+	cursor: text;
+}
+
+.secretcodelink:hover
+{
+	font-family: 'Courier New';
+	color: #cccccc;
+	font-size: 12px;
+	cursor: text;
+}
+
+.secretcodelink:active
+{
+	font-family: 'Courier New';
+	color: #cccccc;
+	font-size: 12px;
+    text-decoration: none;
+	cursor: text;
+}
+
+.secrettextlink:link
+{
+	font-family: Arial;
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	cursor: text;
+}
+
+.secrettextlink:visited
+{
+	font-family: Arial;
+	color: white;
+	font-size: 15px;
+	text-decoration: underline;
+	cursor: hand;
+}
+
+.secrettextlink:hover
+{
+	font-family: Arial;
+	color: white;
+	font-size: 15px;
+	cursor: text;
+}
+
+.secrettextlink:active
+{
+	font-family: Arial;
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	cursor: text;
+}
+
+.availablelink
+{
+	font-size: 9pt;
+	font-family: Arial;
+}
+
+.feedback
+{
+}
+
+.rssbox
+{
+	position: absolute;
+	width: 36px;
+	height: 14px;
+	top: 200px;
+	left: 920px;
+	background-color: transparent;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	z-index: 100;
+	font-family: Arial;
+	font-size: 9pt;
+}
+
+.lessonbox
+{
+    padding: 7px;
+    margin: 0px;
+    position: relative;
+    width: 600px;
+    height: 68px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    display:block;
+}
+
+.lessonboxhighlighted
+{
+    padding: 7px;
+    margin: 0px;
+    position: relative;
+    width: 600px;
+    height: 68px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    display:block;
+}
+
+.lessonthumbbox
+{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    height: 70px;
+    width: 100px;
+}
+
+.lessonboxlink:link
+{
+    text-decoration: none;
+}
+.lessonboxlink:visited
+{
+    text-decoration: none;
+}
+.lessonboxlink:hover
+{
+    text-decoration: none;
+}
+.lessonboxlink:active
+{
+    text-decoration: none;
+}
+
+.colortable
+{
+    border-width: 0px;
+    background: transparent;
+}
+
+.blackcolorbox
+{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    float: left;
+}
+
+.darkgraycolorbox
+{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFF;
+    background-color: #1e1e1e;
+    float: left;
+    margin-left: 10px;
+}
+
+.lightgraycolorbox
+{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #909090;
+    float: left;
+    margin-left: 10px;
+}
+
+.whitecolorbox
+{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    float: left;
+    margin-left: 10px;
+}
+
+.onetimepayment
+{
+    font-size: 9pt;
+    color: gray;
+    font-family: Arial
+}
