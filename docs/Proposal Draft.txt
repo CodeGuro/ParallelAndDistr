@@ -1,4 +1,10 @@
 Synchronization of State (Game) Space for Multiplayer Online Gaming
 ===================================================================
 
-In multiplayer online gaming, players (clients) across the world may be competing against each other in a match. How is it that all the players are able to simultaneously act in the game's environment such that those actions are (seemingly) instantaneously reflected to all the other players'?
+In multiplayer online gaming, players (clients) across the world may be competing against each other in a match. How is it that each player is able to act simultaneously in the game's environment such that those actions seem to be instantaneously reflected in the game environments of all the other players?
+
+Our group would like to explore this topic and its evolution from distributed computing solutions to the cutting edge of cloud computing. "Crackdown 3" for the XBox One provides a key case study as the game state extends beyond players' actions and positions to incorporate a player-alterable landscape. The intense amount of processing needed to track and simulate the physical changes to the environment is handled by cloud computing while the client's console is only required to render the graphics.
+
+See:
+http://www.polygon.com/2015/8/11/9132195/crackdown-3-multiplayer-cloud-xbox-one-gamescom-2015
+http://www.wired.com/2015/08/crackdown-3-isp/
